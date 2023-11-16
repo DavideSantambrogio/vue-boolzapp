@@ -64,7 +64,7 @@
                             <div class="hours">16.15</div>
                         </li> -->
                         
-                        <li v-for="contact in contacts" >
+                        <li v-for="contact in contacts" @click="setActiveContact(contact)">
                             <div class="avatar">
                                 <img :src=contact.avatar>
                             </div>
@@ -97,14 +97,14 @@
                         <div class="action">
                             <i class="fa-solid fa-magnifying-glass"></i>  
                             <i class="fa-solid fa-paperclip"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-    
+                            <i class="fa-solid fa-ellipsis-vertical"></i>    
                         </div>
+                        
                     </header>                
         
                     <!-- message box -->
                     <div class="message-box">
-                        <div class="send">
+                        <!-- <div class="send">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti ab debitis dicta dolorum ipsa magni doloribus aperiam aspernatur magnam repellat nemo, facere aut iusto repellendus dignissimos placeat esse. Exercitationem.</p>
                             <div class="opt">
                                 <i class="fa-solid fa-chevron-down"></i>
@@ -112,10 +112,16 @@
                                     <div>Info messaggio</div>
                                     <div>Cancella messaggio</div>
                                 </div> 
-                            </div> 
-    
-                        </div>
-                        <div class="recived">
+                            </div>     
+                        </div> -->
+                        <div v-if="activeContact">
+                            <h2>{{ activeContact.name }}</h2>
+                            <div v-for="message in activeContact.messages" >
+                                <p v-if="message.status === 'received'" class="recived">{{ message.message }}</p>
+                                <p v-else class="send">{{ message.message }}</p>
+                            </div>
+
+                        <!-- <div class="recived">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti ab debitis dicta dolorum ipsa magni doloribus aperiam aspernatur magnam repellat nemo, facere aut iusto repellendus dignissimos placeat esse. Exercitationem.</p>
                             <div class="opt">
                                 <i class="fa-solid fa-chevron-down"></i>
@@ -124,7 +130,7 @@
                                     <div>Cancella messaggio</div>
                                 </div> 
                             </div>   
-                        </div>
+                        </div> -->
                     </div>
         
                     <!-- write-box -->

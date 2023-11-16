@@ -4,7 +4,9 @@ const { createApp } = Vue;
 const app = createApp({
     data () {
         // dati
+        
         return{
+            activeContact: "",
             contacts: [
                 
                 {
@@ -187,6 +189,9 @@ const app = createApp({
 
     methods: {
         // funzioni
+        setActiveContact(contact) {
+            this.activeContact = contact;
+        },
           
     },
 }).mount("#app");
