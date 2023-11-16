@@ -113,12 +113,26 @@
                                 </div> 
                             </div>     
                         </div> -->
-                        <div v-if="activeContact">                            
+                        <div class="activeContact ">                            
                             <div v-for="message in activeContact.messages" >
-                                <p v-if="message.status === 'received'" class="recived">{{ message.message }}</p>
-                                <p v-else class="send">{{ message.message }}</p>
-                            </div>
+                                <div v-if="message.status === 'received'" class="recived">
+                                    <div class="message">
+                                        <p>{{ message.message }}</p>
+                                        <div class="message-hours">{{ message.date }}</div> 
+
+                                    </div>
+                                </div>
+                                <div v-else class="send">
+                                    <div class="message">
+                                        <p>{{ message.message }}</p>
+                                        <div class="message-hours">{{ message.date }}</div>
+                                    </div>
+                                </div>
+                                                               
+                            </div>                          
                         </div>
+
+                        
 
                         <!-- <div class="recived">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti ab debitis dicta dolorum ipsa magni doloribus aperiam aspernatur magnam repellat nemo, facere aut iusto repellendus dignissimos placeat esse. Exercitationem.</p>

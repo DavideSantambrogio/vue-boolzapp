@@ -198,10 +198,10 @@ const app = createApp({
         },
         sendMessage() {
             if (this.newMessage.trim() !== '') {
-                this.activeContact.messages.push({
-                    date: new Date().toLocaleString(),
+                this.activeContact.messages.push({                    
                     message: this.newMessage,
                     status: 'sent',
+                    date: new Date().toLocaleString(),
                 });
                 this.newMessage = '';
             }

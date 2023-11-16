@@ -311,6 +311,16 @@ li:hover {
     cursor: pointer;
 }
 
+.message{
+    width: 100%;
+}
+
+.message-hours {   
+    text-align: end;    
+    font-size: 0.8rem;
+    color: var(--msg-preview);    
+ }
+
 /* write-box */
 .write-box {
     
