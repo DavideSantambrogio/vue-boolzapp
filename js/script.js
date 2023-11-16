@@ -6,7 +6,6 @@ const app = createApp({
         // dati
         
         return{
-            activeContact: "",
             contacts: [
                 
                 {
@@ -177,7 +176,12 @@ const app = createApp({
                 }
                 ],
                 }
-                ]
+                ],
+            
+            activeContact: "",
+            newMessage: "",
+
+
 
         }
     },    
@@ -191,6 +195,16 @@ const app = createApp({
         // funzioni
         setActiveContact(contact) {
             this.activeContact = contact;
+        },
+        sendMessage() {
+            if (this.newMessage.trim() !== '') {
+                this.activeContact.messages.push({
+                    date: new Date().toLocaleString(),
+                    message: this.newMessage,
+                    status: 'sent',
+                });
+                this.newMessage = '';
+            }
         },
           
     },
