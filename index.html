@@ -88,11 +88,10 @@
                     <!-- header -->
                     <header class="header-chat">
                         <div class="avatar">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="activeContact.avatar" alt="">
                         </div>
                         <div class="name">
-                            <h4>Michele</h4>
-                                <p>Ultimo accesso oggi alle 16:24</p>
+                            <h4>{{ activeContact.name }}</h4>
                         </div>
                         <div class="action">
                             <i class="fa-solid fa-magnifying-glass"></i>  
@@ -114,12 +113,12 @@
                                 </div> 
                             </div>     
                         </div> -->
-                        <div v-if="activeContact">
-                            <h2>{{ activeContact.name }}</h2>
+                        <div v-if="activeContact">                            
                             <div v-for="message in activeContact.messages" >
                                 <p v-if="message.status === 'received'" class="recived">{{ message.message }}</p>
                                 <p v-else class="send">{{ message.message }}</p>
                             </div>
+                        </div>
 
                         <!-- <div class="recived">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti ab debitis dicta dolorum ipsa magni doloribus aperiam aspernatur magnam repellat nemo, facere aut iusto repellendus dignissimos placeat esse. Exercitationem.</p>

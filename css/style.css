@@ -241,7 +241,9 @@ li:hover {
     /* border: 1px solid red;
          */
     /* /debug */
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
     width: calc((100%/3) * 2);
     background-image: url(../img/mine.jpg);
     background-repeat: repeat;
@@ -259,10 +261,9 @@ li:hover {
 
 /* message box */
 
-.message-box {
-    padding: 2rem 3rem;
+.message-box {    
     overflow-y: auto;
-    height: calc(100% - var(--height) - var(--height));    
+    height: calc(100% - var(--height) );    
 }
 
 .recived , .send {
