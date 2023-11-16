@@ -53,86 +53,29 @@
                     </div>
                     <!-- list -->
                     <ul>
-                        <li>
+                        <!-- <li>
                             <div class="avatar">
                                 <img src="img/avatar_1.jpg" alt="">
                             </div>
                             <div class="name">
-                                <h4>Michele</h4>
+                                <h4>Michelehjg</h4>
                                 <p>Lorem ipsum dolor sit amet</p>
                             </div>
                             <div class="hours">16.15</div>
-                        </li>
-                        <li>
+                        </li> -->
+                        
+                        <li v-for="contact in contacts" >
                             <div class="avatar">
-                                <img src="img/avatar_2.jpg" alt="">
+                                <img :src=contact.avatar>
                             </div>
                             <div class="name">
-                                <h4>Fabio</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
+                                <h4>{{ contact.name }} </h4>
                             </div>
-                            <div class="hours">16.15</div>
+                            <div class="hours"></div>    
                         </li>
-                        <li>
-                            <div class="avatar">
-                                <img src="img/avatar_3.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <h4>Samuele</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div class="hours">16.15</div>
-                        </li>
-                        <li>
-                            <div class="avatar">
-                                <img src="img/avatar_4.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <h4>Alessandro B.</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div class="hours">16.15</div>
-                        </li>
-                        <li>
-                            <div class="avatar">
-                                <img src="img/avatar_5.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <h4>Alessandro L.</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div class="hours">16.15</div>
-                        </li>
-                        <li>
-                            <div class="avatar">
-                                <img src="img/avatar_6.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <h4>Claudia</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div class="hours">16.15</div>
-                        </li>
-                        <li>
-                            <div class="avatar">
-                                <img src="img/avatar_7.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <h4>Federico</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div class="hours">16.15</div>
-                        </li>
-                        <li>
-                            <div class="avatar">
-                                <img src="img/avatar_8.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <h4>Gino</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div class="hours">16.15</div>
-                        </li>       
+                            
+                        
+                        
                     </ul>
                     
                 </div>
