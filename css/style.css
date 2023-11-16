@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-top: #009688;
+    --background-bottom: #C8CAC6;
+    --background-notification: #8EDAFC;
+    --background-header: #EAEAEA;
+    --send: #D5F9BA;
+    --recived: #FFFFFF;
+    --icon: #B6B9BB;
+    --msg-preview: #CBBBC6;
+    
+    
+    --height: 70px;
+    --search-bar: 40px
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* common */
+img {
+    max-width: 100%;    
+}
+
+header {
+    height: fit-content;
+    background-color: var(--background-header) ;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+        to top,
+        var(--background-bottom) 0%,
+        var(--background-bottom)70%,
+        var(--background-top) 70%,
+        var(--background-top) 100%);
+    padding: 1rem 0;
+
+    
+}
+
+i {
+    color: var(--icon);
+    cursor: pointer;
+}
+
+
+
+/* body  */
+.container{
+    /* debug */
+    /* border: 1px solid black;          */
+    /* /debug */
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;  
+    display: flex;      
+}
+
+/* avatar */
+.container-avatar {
+    /* debug */
+    /* border: 1px solid black;        */
+    /* /debug */
+    width: calc(100%/3);
+     
+}
+
+/* header-avatar */
+.header-avatar {
+    /* debug */
+    /* border: 1px solid black; */
+    /*  ; */
+    /* /debug */
+    display: flex;
+    justify-content: space-between;   
+    padding: 0 0.4rem;
+     
+}
+
+.avatar {
+    /* debug */
+    /* border: 1px solid black;         */
+    /* /debug */    
+    padding: 0.4rem;
+    height: var(--height) ;
+    width: var(--height);
+    
+}
+
+.avatar img {
+    border-radius: 50%;
+}
+
+.action {
+    /* debug */
+    /* border: 1px solid black;
+    min-height: var(--height) ;
+    min-width: var(--height); */
+    /* /debug */
+    margin-left: auto;    
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+/* call to action */
+.notification {
+    /* debug */
+    /* border: 1px solid black;
+    max-height: var(--height) ; */
+    /* /debug */
+    display: flex;
+    background-color: var(--background-notification);
+    gap: 1rem;
+    height: var(--height);   
+    padding-left: .8rem;
+    align-items: center;
+}
+
+
+.bell {
+    /* debug */
+    /* border: 1px solid black; */
+    /* min-height: var(--height) ;
+    min-width: var(--height);     */
+    /* /debug */
+    display: flex;
+    align-items: center;
+}
+       
+
+
+.bell i {
+    background-color: white;  
+    color: var(--background-notification);
+    padding: .8rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}    
+
+.notification-txt {
+    /* debug */
+    /* border: 1px solid black;  */
+    /* min-height: var(--height) ;
+    min-width: var(--height);      */
+    /* /debug */
+}
+
+.notification-txt a {
+    font-size: 0.8rem;
+    color: blue;
+}
+
+.search {
+    /* debug */
+    /* border: 1px solid black; */      
+    /* /debug */
+    height: var(--search-bar);
+    padding-left: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+}
+.search input {
+    width: 100%;
+    border: none;
+    line-height: 100%;
+}
+
+/* list */
+ul {
+    padding-left: 0.4rem;
+    overflow-y: auto;
+    background-color: white;
+    height: calc(100vh - var(--height) - var(--height) - var(--search-bar) - 2rem );
+}
+
+li {
+    /* debug */
+    /* border: 1px solid black; */    
+    /* /debug */    
+    display: flex;
+    align-items: center;
+} 
+
+li:hover {
+    background-color: var(--background-header);
+}
+
+.name {
+    /* debug */
+    /* border: 1px solid black; */
+    /* min-height: var(--height) ; */
+    /* min-width: var(--height); */
+    /* /debug */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name p {
+    font-size: 0.8rem;
+    color: var(--msg-preview);
+
+}
+
+ .hours {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: var(--msg-preview);
+    margin-right: 0.8rem;
+ }
+
+/*<------------------chat------------------> */
+
+/* header */
+.header-chat {
+    /* debug */
+    /* border: 1px solid black; */
+    /*  ; */
+    /* /debug */
+    display: flex;      
+    padding: 0 0.4rem;
+     
+}
+
+.container-chat {
+    /* debug */
+    /* border: 1px solid red;
+         */
+    /* /debug */
+    
+    width: calc((100%/3) * 2);
+    background-image: url(../img/mine.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+.action-chat {
+    /* debug */
+    /* border: 1px solid black;
+    min-height: var(--height) ;
+    min-width: var(--height); */
+    /* /debug */
+    margin-left: auto;
+}
+
+/* message box */
+
+.message-box {
+    padding: 2rem 3rem;
+    overflow-y: auto;
+    height: calc(100% - var(--height) - var(--height));    
+}
+
+.recived , .send {
+    border-radius: 1rem;
+    padding: 1rem 0.7rem;
+    display: flex;
+    margin-bottom: 0.5rem;
+    max-width: 60%;
+    position: relative;
+}
+
+.send {
+    background-color: var(--send);    
+    margin-left: auto ;
+}
+
+    /* attenzione mergin per calcolo altezze */
+
+.recived  {
+    background-color: var(--recived);     
+}
+
+.opt-chat {
+    /* debug */
+    /* border: 1px solid black;*/
+    /* /debug */
+    white-space: nowrap;
+    position: absolute;
+    right: 0.8rem; ;
+    top: 2rem;    
+    height: fit-content;
+    background-color: white;
+    line-height: 2rem;
+    box-shadow: 3px 3px 3px 3px var(--background-bottom);
+    display: none;
+    
+}
+
+.opt:hover .opt-chat {
+    display: inline-block  
+}
+
+.opt-chat div:hover {
+    background-color: var(--background-bottom);
+    cursor: pointer;
+}
+
+/* write-box */
+.write-box {
+    
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background-header);
+    
+ }
+
+.emoticon , .rec {
+    /* debug */
+    /* border: 1px solid black;
+    min-height: var(--height) ; */
+    /* /debug */
+    width: var(--height);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    font-size: 1.5rem;
+}
+
+.imput-message {
+    /* debug */
+    /* border: 1px solid black; */
+    /* /debug */  
+    height: var(--height) ;  
+    width: calc(95% - var(--height) - var(--height));
+    display: flex;
+    align-items: center;
+}
+    
+.imput-message input {
+    height: calc(100% - 1.5rem);
+    width: calc(100%);
+    padding: 0 0.5rem; 
+    border: none;   
+}
+ 

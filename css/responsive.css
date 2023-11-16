@@ -1,0 +1,98 @@
+/* tablet */
+
+/* avatar */
+@media screen and (max-width: 768px) {
+    .call-to-act{
+        display: none;
+    }
+
+    .header-avatar .name , .header-avatar .action {
+        display: none;
+    }
+
+    li .name , li .hours {
+        display: none;
+
+    }
+
+    .wrapper {
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    ul {
+        height: calc(100vh - (var(--height)));       
+    }
+
+    .container-avatar {
+        width: fit-content;
+    }
+
+    
+
+}
+
+/* chat */
+
+@media screen and (max-width: 768px) {
+    .container-chat {
+        width: 100%;
+    }
+
+    
+}
+
+
+/* <-------------------smartphone-------------------> */
+
+/* avatar  */
+@media screen and (max-width: 426px) {
+    .container-avatar {
+        display: none;
+    }    
+}
+
+/* chat */
+
+@media screen and (max-width: 426px) {
+    
+    .header-chat .action {
+        display: none;
+
+    }
+    
+    .message-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .recived , .send {
+        max-width: 85%;
+    }
+
+    .action-chat , .emoticon , .rec {
+        display: none;
+    }
+
+    .header-avatar {
+        justify-content: flex-start;
+    }
+
+    .imput-message { 
+        width: 100%;
+        display: flex;   
+        justify-content: center; 
+    }
+
+    .imput-message input { 
+        width: 90%;
+        
+    }
+
+
+
+
+
+}
