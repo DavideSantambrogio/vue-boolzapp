@@ -205,6 +205,13 @@ const app = createApp({
                     date: new Date().toLocaleString(),
                 });
                 this.newMessage = '';
+                setTimeout(() => {                                  
+                    this.activeContact.messages.push({                        
+                        message: 'Ok',
+                        status: 'received',
+                        date: new Date().toLocaleString(),
+                    });
+                }, 1000);
             }
         },
         dateToHourMin(fullDate) {
@@ -213,6 +220,7 @@ const app = createApp({
             (fullDate, "dd/MM/yyyy, HH:mm:ss");
             return luxonDate.toFormat("HH:mm");
         },
+        
           
     },
 }).mount("#app");
