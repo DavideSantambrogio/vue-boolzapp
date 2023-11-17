@@ -208,7 +208,7 @@ const app = createApp({
                 // ricevi messaggio
                 setTimeout(() => {                                  
                     this.activeContact.messages.push({                        
-                        message: 'Ok',
+                        message: 'ok',
                         status: 'received',
                         date: new Date().toLocaleString(),
                     });

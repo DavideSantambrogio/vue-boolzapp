@@ -58,9 +58,9 @@
                             </div>
                             <div class="name">
                                 <h4>{{ contact.name }} </h4>
-                                <small>message preeview</small>
+                                <small>message preview</small>
                             </div>
-                            <div class="hours">00.00</div>
+                            <div class="hours">0000<div>
                         </li>
                     </ul>                    
                 </div>
@@ -127,11 +127,11 @@
                                 </div>
                                                                
                             </div>                          
-                        </div>                        
+                        </div>
                     </div>
         
                     <!-- write-box -->
-                    <div class="write-box">
+                    <div class="write-box" v-if="activeContact">
                         <div class="emoticon">
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
