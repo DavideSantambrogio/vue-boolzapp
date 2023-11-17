@@ -206,6 +206,11 @@ const app = createApp({
                 this.newMessage = '';
             }
         },
+        dateToHourMin(fullDate) {
+            const luxonDate = dt.fromFormat
+            (fullDate, "dd/MM/yyyy HH:mm:ss");
+            return luxonDate.toFormat("HH:mm");
+        },
           
     },
 }).mount("#app");

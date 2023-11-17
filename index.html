@@ -125,7 +125,7 @@
                                 <div v-else class="send">
                                     <div class="message">
                                         <p>{{ message.message }}</p>
-                                        <div class="message-hours">{{ message.date }}</div>
+                                        <div class="message-hours"> {{ dateToHourMin(message.date)}} </div>
                                     </div>
                                 </div>
                                                                
@@ -166,6 +166,8 @@
             </div>
         </div>
     </div>
+    <!-- luxon -->  
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <!-- script -->
     <script src="js/script.js"></script>
 </body>
