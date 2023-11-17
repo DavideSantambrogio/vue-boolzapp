@@ -118,7 +118,7 @@
                                 <div v-if="message.status === 'received'" class="recived">
                                     <div class="message">
                                         <p>{{ message.message }}</p>
-                                        <div class="message-hours">
+                                        <div class="message-hours">                  
                                             {{ dateToHourMin(message.date)}}
                                         </div> 
 
@@ -128,6 +128,7 @@
                                     <div class="message">
                                         <p>{{ message.message }}</p>
                                         <div class="message-hours">
+                                            <!-- {{ message.date }} -->
                                             {{ dateToHourMin(message.date)}}
                                         </div>
                                     </div>
