@@ -234,13 +234,12 @@ const app = createApp({
                 else {
                     element.visible= false;
                 }
-
-                
             });
+        },
 
-
-        }
-        
-          
+        // cancella 
+        deleteMessage(index) {
+            this.activeContact.messages.splice(index, 1);
+        },
     },
 }).mount("#app");

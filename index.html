@@ -88,13 +88,15 @@
                     <!-- message box -->
                     <div class="message-box">                        
                         <div class="activeContact ">                            
-                            <div v-for="message in activeContact.messages" >
+                            <div v-for="(message, index) in activeContact.messages" >
                                 <div v-if="message.status === 'received'" class="recived">
                                     <div class="opt">
                                         <i class="fa-solid fa-chevron-down"></i>
                                         <div class="opt-chat">
                                             <div>Info messaggio</div>
-                                            <div>Cancella messaggio</div>
+                                            <div @click="deleteMessage(index)">
+                                                Cancella messaggio
+                                            </div>
                                         </div> 
                                     </div>
                                     <div class="message">
@@ -109,7 +111,9 @@
                                         <i class="fa-solid fa-chevron-down"></i>
                                         <div class="opt-chat">
                                             <div>Info messaggio</div>
-                                            <div>Cancella messaggio</div>
+                                            <div @click="deleteMessage(index)">
+                                                Cancella messaggio
+                                            </div>
                                         </div> 
                                     </div>
                                     <div class="message">
