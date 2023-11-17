@@ -180,6 +180,7 @@ const app = createApp({
             
             activeContact: "",
             newMessage: "",
+            
 
 
 
@@ -207,6 +208,7 @@ const app = createApp({
             }
         },
         dateToHourMin(fullDate) {
+            const dt = luxon.DateTime
             const luxonDate = dt.fromFormat
             (fullDate, "dd/MM/yyyy HH:mm:ss");
             return luxonDate.toFormat("HH:mm");
