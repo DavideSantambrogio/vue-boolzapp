@@ -197,6 +197,8 @@ const app = createApp({
         setActiveContact(contact) {
             this.activeContact = contact;
         },
+
+        // invia messaggio
         sendMessage() {
             if (this.newMessage.trim() !== '') {
                 this.activeContact.messages.push({                    
@@ -205,6 +207,8 @@ const app = createApp({
                     date: new Date().toLocaleString(),
                 });
                 this.newMessage = '';
+
+                // ricevi messaggio
                 setTimeout(() => {                                  
                     this.activeContact.messages.push({                        
                         message: 'Ok',
@@ -214,6 +218,8 @@ const app = createApp({
                 }, 1000);
             }
         },
+
+        // orario
         dateToHourMin(fullDate) {
             const dt = luxon.DateTime
             const luxonDate = dt.fromFormat            
