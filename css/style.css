@@ -269,11 +269,12 @@ li:hover {
 
 .recived , .send {
     border-radius: 1rem;
-    padding: 1rem 0.7rem;
-    display: flex;
+    padding: 0.2rem 0.7rem;    
     margin-bottom: 0.5rem;
     max-width: 60%;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .send {
@@ -287,19 +288,25 @@ li:hover {
     background-color: var(--recived);     
 }
 
+.opt {
+    align-self: self-end;
+    
+}
+
 .opt-chat {
     /* debug */
     /* border: 1px solid black;*/
     /* /debug */
     white-space: nowrap;
     position: absolute;
-    right: 0.8rem; ;
-    top: 2rem;    
+    right: 0.5rem; ;
+    top: 1.2rem;    
     height: fit-content;
     background-color: white;
     line-height: 2rem;
     box-shadow: 3px 3px 3px 3px var(--background-bottom);
     display: none;
+    z-index: 999;
     
 }
 

@@ -224,8 +224,8 @@ const app = createApp({
             return luxonDate.toFormat("HH:mm");
         },
 
-        searchContact () {
-            console.log("ricerca", this.searchText);
+        // ricerca
+        searchContact () {            
             let search = this.searchText.toLowerCase();
             this.contacts.forEach(element => {
                 if (element.name.toLowerCase().includes(search)) {

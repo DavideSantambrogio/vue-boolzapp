@@ -90,15 +90,28 @@
                         <div class="activeContact ">                            
                             <div v-for="message in activeContact.messages" >
                                 <div v-if="message.status === 'received'" class="recived">
+                                    <div class="opt">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                        <div class="opt-chat">
+                                            <div>Info messaggio</div>
+                                            <div>Cancella messaggio</div>
+                                        </div> 
+                                    </div>
                                     <div class="message">
                                         <p>{{ message.message }}</p>
                                         <div class="message-hours">                  
                                             {{ dateToHourMin(message.date)}}
-                                        </div> 
-
-                                    </div>
+                                        </div>
+                                    </div>                                    
                                 </div>
                                 <div v-else class="send">
+                                    <div class="opt">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                        <div class="opt-chat">
+                                            <div>Info messaggio</div>
+                                            <div>Cancella messaggio</div>
+                                        </div> 
+                                    </div>
                                     <div class="message">
                                         <p>{{ message.message }}</p>
                                         <div class="message-hours">
@@ -106,6 +119,7 @@
                                             {{ dateToHourMin(message.date)}}
                                         </div>
                                     </div>
+                                    
                                 </div>
                                                                
                             </div>                          
