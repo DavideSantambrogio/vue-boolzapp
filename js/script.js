@@ -180,10 +180,7 @@ const app = createApp({
             
             activeContact: "",
             newMessage: "",
-            
-
-
-
+            searchText: "",
         }
     },    
 
@@ -226,6 +223,23 @@ const app = createApp({
             (fullDate, "dd/MM/yyyy, HH:mm:ss");
             return luxonDate.toFormat("HH:mm");
         },
+
+        searchContact () {
+            console.log("ricerca", this.searchText);
+            let search = this.searchText.toLowerCase();
+            this.contacts.forEach(element => {
+                if (element.name.toLowerCase().includes(search)) {
+                    element.visible= true;
+                }
+                else {
+                    element.visible= false;
+                }
+
+                
+            });
+
+
+        }
         
           
     },

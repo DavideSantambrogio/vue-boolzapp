@@ -263,7 +263,8 @@ li:hover {
 
 .message-box {    
     overflow-y: auto;
-    height: calc(100% - var(--height) );    
+    height: calc(100% - var(--height) ); 
+    padding: 0 1rem;   
 }
 
 .recived , .send {

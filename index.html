@@ -47,19 +47,20 @@
                         </div>
                         <div class="search">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="search" name="" id="" placeholder="Cerca o inizia una nuova chat"> 
+                            <input type="text" name="" id="" placeholder="Cerca o inizia una nuova chat" v-model="searchText" @keyup="searchContact"> 
                         </div>        
                     </div>
                     <!-- list -->
                     <ul>                                                
-                        <li v-for="contact in contacts" @click="setActiveContact(contact)">
+                        <li v-for="contact in contacts" @click="setActiveContact(contact)" v-show="contact.visible">
                             <div class="avatar">
                                 <img :src=contact.avatar>
                             </div>
                             <div class="name">
                                 <h4>{{ contact.name }} </h4>
+                                <small>message preeview</small>
                             </div>
-                            <div class="hours"></div>    
+                            <div class="hours">00.00</div>
                         </li>
                     </ul>                    
                 </div>
