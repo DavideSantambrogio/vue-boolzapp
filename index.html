@@ -58,9 +58,9 @@
                             </div>
                             <div class="name">
                                 <h4>{{ contact.name }} </h4>
-                                <small>message preview</small>
+                                <small>{{ contact.messages[contact.messages.length -1].message }}</small>
                             </div>
-                            <div class="hours">0000<div>
+                            <div class="hours">{{ dateToHourMin(contact.messages[contact.messages.length - 1].date) }}<div>
                         </li>
                     </ul>                    
                 </div>

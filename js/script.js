@@ -185,6 +185,7 @@ const app = createApp({
 
     created(){
         // all'avvio della pagina
+        this.activeContact = this.contacts[0];
 
     },
 
@@ -205,8 +206,9 @@ const app = createApp({
                 this.newMessage = '';
 
                 // ricevi messaggio
+                const replyIndex= this.activeContact
                 setTimeout(() => {
-                    this.activeContact.messages.push({                        
+                        replyIndex.messages.push({                        
                         message: 'ok',
                         status: 'received',
                         date: dt.now().toFormat("dd/MM/yyyy HH:mm:ss"),

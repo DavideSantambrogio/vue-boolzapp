@@ -24,9 +24,7 @@ body {
 }
 
 /* common */
-img {
-    max-width: 100%;    
-}
+
 
 header {
     height: fit-content;
@@ -98,6 +96,8 @@ i {
 
 .avatar img {
     border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 55px;
 }
 
 .action {
