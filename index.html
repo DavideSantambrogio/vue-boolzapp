@@ -51,14 +51,14 @@
                         </div>        
                     </div>
                     <!-- list -->
-                    <ul>                                                
+                    <ul class="scrollbar" id="style-1">                                                
                         <li v-for="contact in contacts" @click="setActiveContact(contact)" v-show="contact.visible">
                             <div class="avatar">
                                 <img :src=contact.avatar>
                             </div>
                             <div class="name">
                                 <h4>{{ contact.name }} </h4>
-                                <small>{{ contact.messages[contact.messages.length -1].message }}</small>
+                                <small>{{ truncate(contact.messages[contact.messages.length - 1].message, 50) }}</small>
                             </div>
                             <div class="hours">{{ dateToHourMin(contact.messages[contact.messages.length - 1].date) }}<div>
                         </li>
@@ -86,7 +86,7 @@
                     </header>                
         
                     <!-- message box -->
-                    <div class="message-box">                        
+                    <div class="message-box scrollbar" id="style-1" ref="messageContainer">                        
                         <div class="activeContact ">                            
                             <div v-for="(message, index) in activeContact.messages" >
                                 <div v-if="message.status === 'received'" class="recived">
@@ -151,6 +151,6 @@
     <!-- luxon -->  
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <!-- script -->
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>
