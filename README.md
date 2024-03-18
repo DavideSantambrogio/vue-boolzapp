@@ -4,4 +4,19 @@ Abbiamo la possibilità di  navigatre tra le chat, cercare una chat specifica at
 
 link https://tubular-axolotl-71ff9d.netlify.app/
 
-<img src="img/Screenshot 2024-03-07 163615.png" alt="">
+## Desktop
+
+<img src="screenshot/Screenshot 2024-03-18 161041.png" alt="">
+
+## Tablet
+
+<img src="screenshot/Screenshot 2024-03-18 160705.png" alt="">
+
+## Mobile
+
+<img src="screenshot/Screenshot 2024-03-18 160830.png" alt="">
+
+### Come far funzionare OpenAI API
+Insereire la propria chiave API nello script.js cambiando solo la scritta IL_TUO_API_KEY
+
+<img src="screenshot/Screenshot 2024-03-18 161544.png" alt="">
