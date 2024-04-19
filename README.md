@@ -1,6 +1,6 @@
 In questo progetto ho realizzato un clone della nota app di messaggistica whatsapp utilizzando Vue.js
 
-Abbiamo la possibilità di  navigatre tra le chat, cercare una chat specifica attraverso l'apposita casella di ricerca, inoltre è presente una risposta automatica ai messaggi
+Abbiamo la possibilità di  navigatre tra le chat, cercare una chat specifica attraverso l'apposita casella di ricerca, inoltre è presente una risposta automatica ai messaggi integrando chatgpt
 
 link https://tubular-axolotl-71ff9d.netlify.app/
 
