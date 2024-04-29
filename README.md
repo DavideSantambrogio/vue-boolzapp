@@ -2,6 +2,7 @@ In questo progetto ho realizzato un clone della nota app di messaggistica whatsa
 
 Abbiamo la possibilità di  navigatre tra le chat, cercare una chat specifica attraverso l'apposita casella di ricerca, inoltre è presente una risposta automatica ai messaggi integrando chatgpt
 
+N.B. LA CONVERSAZIONE NON FUNZIONERÀ PERCHÈ MANCA LA API KEY DI OPEN AI
 link https://tubular-axolotl-71ff9d.netlify.app/
 
 ## Desktop
